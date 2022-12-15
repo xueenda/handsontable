@@ -44,7 +44,7 @@ export function getParent(element, level = 0) {
  * @returns {HTMLIFrameElement|null}
  */
 export function getFrameElement(frame) {
-  return Object.getPrototypeOf(frame.parent) && frame.frameElement;
+  return frame.parent ? (Object.getPrototypeOf(frame.parent) && frame.frameElement) : frame;
 }
 
 /**
